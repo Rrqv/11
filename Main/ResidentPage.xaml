@@ -1,0 +1,21 @@
+﻿<Page x:Class="ЖКХ.ResidentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:ЖКХ"
+      Title="Личный кабинет жильца">
+
+    <DockPanel>
+        <!-- Меню -->
+        <StackPanel DockPanel.Dock="Left" Width="200" Background="#EEEEEE">
+            <TextBlock Text="Жилец" FontWeight="Bold" FontSize="16" Margin="10"/>
+            <Button Content="Мои Платежи" Click="Payments_Click" Margin="5"/>
+            <Button Content="Счетчики" Click="Meters_Click" Margin="5"/>
+            <Button Content="Показания" Click="Readings_Click" Margin="5"/>
+            <Button Content="Заявки" Click="Requests_Click" Margin="5"/>
+            <Button Content="Выйти" Click="LogoutButton_Click" Margin="5" Foreground="Red"/>
+        </StackPanel>
+
+        <!-- Контент -->
+        <Frame x:Name="ContentFrame" NavigationUIVisibility="Hidden"/>
+    </DockPanel>
+</Page>
